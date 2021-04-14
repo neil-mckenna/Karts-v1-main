@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &90285354238330777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90285354238330776}
+  - component: {fileID: 90285354238330783}
+  - component: {fileID: 90285354238330782}
+  m_Layer: 0
+  m_Name: RaceMonitor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &90285354238330776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90285354238330777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90285354238330783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90285354238330777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dbc73ac3b26f34a8032103371362cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownItems:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  singleCarPrefabs:
+  - {fileID: 5309214493011828160, guid: 61fe29bbc0a761c49987c158d35700c5, type: 3}
+  - {fileID: 6686371083720314234, guid: ae6f972405bcc70da9e497f66d447c2b, type: 3}
+  - {fileID: 7324427206713450179, guid: a2cea7df6ea07995582a168e40d0a8a3, type: 3}
+  - {fileID: 4867063677552897683, guid: 62c70bdd14503be4f9c20bb0ea312ec5, type: 3}
+  carPrefabs:
+  - {fileID: 273066054838309028, guid: a69f43d201cc3447394fa89503c5882c, type: 3}
+  - {fileID: 3233785325320810545, guid: 8b0c8efb897bf885facd084575825dc6, type: 3}
+  - {fileID: 6352398777185970362, guid: 326e078056e8fe7a78af62af4ee31caf, type: 3}
+  - {fileID: 1149747135339434750, guid: 48b6c0d4d89da95c795887a8e3c5bd30, type: 3}
+  spawnPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  HUD: {fileID: 0}
+  startRace: {fileID: 0}
+  waitingText: {fileID: 0}
+--- !u!114 &90285354238330782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90285354238330777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
