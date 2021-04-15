@@ -39,7 +39,16 @@ public class RaceMonitor : MonoBehaviourPunCallbacks
         startRace.SetActive(false);
         waitingText.SetActive(false);
 
-        playerCar = PlayerPrefs.GetInt("PlayerCar");
+        if(PlayerPrefs.HasKey("PlayerCar"))
+        {
+            playerCar = PlayerPrefs.GetInt("PlayerCar");
+        }
+        else
+        {
+            playerCar = 1;
+        }
+        
+        
         int randomStartPos = Random.Range(0, spawnPos.Length);
         Vector3 startPos = spawnPos[randomStartPos].position;
         Quaternion startRot = spawnPos[randomStartPos].rotation; 

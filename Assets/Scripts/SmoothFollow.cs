@@ -26,6 +26,25 @@ public class SmoothFollow : MonoBehaviour
         Debug.Log(FP);
     }
 
+    private void Update()
+    {
+        //Debug.Log(Camera.main.transform.position);
+        //Debug.Log(Camera.main.transform.rotation);
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            FP *= -1;
+            PlayerPrefs.SetInt("FP", FP);
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            target[index].Find("RearCamera").gameObject.GetComponent<Camera>().targetTexture = null;
+            index++;
+            if (index > target.Length - 1) index = 0;
+            target[index].Find("RearCamera").gameObject.GetComponent<Camera>().targetTexture = 
+                                                              (rearCamView.texture as RenderTexture);
+        }
+    }
+
     void LateUpdate()
     {
         if (target == null)
@@ -67,32 +86,13 @@ public class SmoothFollow : MonoBehaviour
             Quaternion currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
 
             transform.position = target[index].position;
-            transform.position -= currentRotation * Vector3.forward * distance;
+            transform.position -= currentRotation * new Vector3(0,0,1) * distance;
 
             transform.position = new Vector3(transform.position.x,
                                     currentHeight + heightOffset,
                                     transform.position.z);
 
             transform.LookAt(target[index]);
-        }
-    }
-
-    private void Update()
-    {
-        //Debug.Log(Camera.main.transform.position);
-        //Debug.Log(Camera.main.transform.rotation);
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FP *= -1;
-            PlayerPrefs.SetInt("FP", FP);
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            target[index].Find("RearCamera").gameObject.GetComponent<Camera>().targetTexture = null;
-            index++;
-            if (index > target.Length - 1) index = 0;
-            target[index].Find("RearCamera").gameObject.GetComponent<Camera>().targetTexture = 
-                                                              (rearCamView.texture as RenderTexture);
         }
     }
 }
